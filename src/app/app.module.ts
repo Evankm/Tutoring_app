@@ -9,6 +9,10 @@ import { StudentCoursesComponent } from './student-courses/student-courses.compo
 import { AppointmentReasonComponent } from './appointment-reason/appointment-reason.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { SuggestionsComponent } from './suggestions/suggestions.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { LayoutModule } from './layout/layout.module';
+import {MatListModule} from '@angular/material/list';
+
 
 
 @NgModule({
@@ -21,9 +25,13 @@ import { SuggestionsComponent } from './suggestions/suggestions.component';
     SuggestionsComponent
   ],
   imports: [
+    
+    MatSidenavModule,
+    LayoutModule,
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
