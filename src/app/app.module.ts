@@ -17,7 +17,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatToolbarModule} from '@angular/material/toolbar';
-
+import{ReactiveFormsModule} from '@angular/forms'
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +36,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatSelectModule,
     MatOptionModule,
     MatButtonModule,
+    ReactiveFormsModule,
     MatCardModule,
     FlexLayoutModule,
     MatToolbarModule

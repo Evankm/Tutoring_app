@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { StudentCoursesComponent } from './student-courses/student-courses.component';
 import { SuggestionsComponent } from './suggestions/suggestions.component';
 
+
 const routes: Routes = [
   {
     path:'' , component: LoginComponent
