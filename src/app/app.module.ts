@@ -9,7 +9,14 @@ import { StudentCoursesComponent } from './student-courses/student-courses.compo
 import { AppointmentReasonComponent } from './appointment-reason/appointment-reason.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { SuggestionsComponent } from './suggestions/suggestions.component';
-
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import { MatOptionModule } from '@angular/material/core';
+import { MatInputModule } from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -23,7 +30,15 @@ import { SuggestionsComponent } from './suggestions/suggestions.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatOptionModule,
+    MatButtonModule,
+    MatCardModule,
+    FlexLayoutModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
