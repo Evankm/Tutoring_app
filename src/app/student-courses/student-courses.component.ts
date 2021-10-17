@@ -5,22 +5,25 @@ import { CoursesServiceService } from '../courses-service.service';
 export interface PeriodicElement {
   name: string;
   position: number;
-  weight: number;
+  weight: string;
   symbol: string;
 }
 
+
 const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Eric', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Bill', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Kim', weight: 6.941, symbol: 'Li'},
-  {position: 4, name: 'Brian', weight: 9.0122, symbol: 'Be'},
-  {position: 5, name: 'Johnson', weight: 10.811, symbol: 'B'},
-  {position: 6, name: 'Steve', weight: 12.0107, symbol: 'C'},
-  {position: 7, name: 'Larry', weight: 14.0067, symbol: 'N'},
-  {position: 8, name: 'Seth', weight: 15.9994, symbol: 'O'},
-  {position: 9, name: 'Faith', weight: 18.9984, symbol: 'F'},
-  {position: 10, name: 'Drizzy', weight: 20.1797, symbol: 'Ne'},
+  {position: 1, name: 'Eric', weight: '9am - 9:30 am mon', symbol: 'CS 2700'},
+  {position: 2, name: 'Bill', weight: '10am - 10:30 am tue', symbol: 'CS 2700'},
+  {position: 3, name: 'Kim', weight: '11am - 11:30 am wed', symbol: 'CS 2700'},
+  {position: 4, name: 'Brian', weight: '12pm - 12:30 pm thur', symbol: 'CS 2700'},
+  {position: 5, name: 'Johnson', weight: '1pm - 1:30 pm fri', symbol: 'CS 2700'},
+  {position: 6, name: 'Steve', weight: '9am - 9:30 am mon', symbol: 'CS 2700'},
+  {position: 7, name: 'Larry', weight: '10am - 10:30 am tue', symbol: 'CS 2700'},
+  {position: 8, name: 'Seth', weight: '11am - 11:30 am wed', symbol: 'CS 2700'},
+  {position: 9, name: 'Faith', weight: '5pm - 5:30 pm fri', symbol: 'CS 2700'},
+  {position: 10, name: 'Drizzy', weight: '5pm - 9:30 pm mon', symbol: 'CS 2700'},
 ];
+
+
 function func() {
 }
 @Component({
@@ -41,13 +44,31 @@ export class StudentCoursesComponent implements OnInit {
   }
 
 
+  res: any
   courses: any = {}
+  tas: any = {}
+  all_data: any = {}
+
+ 
 
   ngOnInit(): void {
 
-    this.courses = this.coursesService.getCourses("616bd72cfc5849e35e4fd6fd").subscribe((data)=>{
-      console.log("Courses", data)
+    this.res = this.coursesService.getCourses("616c2398fc5849e35e4fd705").subscribe((data:any)=>{
+      
+      this.courses = data.courses
+      this.tas = data.courses[0].tutors
+      this.all_data = data
+      console.log("hi", this.courses)
+      console.log("hi", this.tas)
+      console.log("hsi", this.all_data)
+    
+    
     })
+
+    
+    
+
+   
     
   }
   class_ta_table() {
