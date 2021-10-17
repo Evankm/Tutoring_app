@@ -1,11 +1,11 @@
 
 <div class='content' fxLayout="row wrap" fxLayoutGap="15px"> 
-    <mat-card (click)="onCardClick($event)" class="clickable"><mat-card-title>CS 2700</mat-card-title></mat-card>
-    <mat-card class="clickable"><mat-card-title>CS 4340</mat-card-title></mat-card>
-    <mat-card class="clickable"><mat-card-title>MATH 1900</mat-card-title></mat-card>
-    <mat-card class="clickable"><mat-card-title>MATH 1800</mat-card-title></mat-card>
+    <mat-card class="clickable" (click)="class_ta_table()"><mat-card-title >CS 2700</mat-card-title></mat-card>
+    <mat-card class="clickable" (click)="class_ta_table()"><mat-card-title>CS 4340</mat-card-title></mat-card>
+    <mat-card class="clickable" (click)="class_ta_table()"><mat-card-title>MATH 1900</mat-card-title></mat-card>
+    <mat-card class="clickable" (click)="class_ta_table()"><mat-card-title>MATH 1800</mat-card-title></mat-card>
 </div>
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" *ngIf="hide">
 
     <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->

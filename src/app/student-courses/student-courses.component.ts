@@ -27,13 +27,17 @@ function func() {
   styleUrls: ['./student-courses.component.scss']
 })
 export class StudentCoursesComponent implements OnInit {
-
+  hide = false;
   constructor() { }
 
   ngOnInit(): void {
     
     
   }
+  class_ta_table() {
+    this.hide = true;
+  }
+
   displayedColumns: string[] = [ 'request', 'name', 'weight', 'symbol'];
   dataSource = ELEMENT_DATA;
 
