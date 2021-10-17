@@ -9,6 +9,11 @@ import { StudentCoursesComponent } from './student-courses/student-courses.compo
 import { AppointmentReasonComponent } from './appointment-reason/appointment-reason.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { SuggestionsComponent } from './suggestions/suggestions.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import { FormsModule } from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -23,7 +28,12 @@ import { SuggestionsComponent } from './suggestions/suggestions.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    FormsModule,
+    MatInputModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

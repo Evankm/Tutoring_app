@@ -1,1 +1,6 @@
 <p>appointment-reason works!</p>
+<mat-form-field class="example-full-width" appearance="fill">
+  <mat-label>Leave a comment</mat-label>
+  <textarea matInput placeholder="Ex. It makes me feel..." [(ngModel)] = "comment"></textarea>
+  <button (click) = "submit()" >submit</button>
+</mat-form-field>
