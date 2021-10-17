@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import{FormControl,FormGroup,Validators} from '@angular/forms'
 
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,4 +10,8 @@ import{FormControl,FormGroup,Validators} from '@angular/forms'
 })
 export class AppComponent {
   title = 'consilium-scheduling-system';
+  
+  public onCardClick(evt: MouseEvent){
+    console.log(evt);
+  }
 }
