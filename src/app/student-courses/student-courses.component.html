@@ -1,10 +1,11 @@
 
-<div class='content' fxLayout="row wrap" fxLayoutGap="15px"> 
+<div class='content' fxLayout="row wrap" fxLayoutGap="11px"> 
     <mat-card class="clickable" (click)="class_ta_table()"><mat-card-title >CS 2700</mat-card-title></mat-card>
     <mat-card class="clickable" (click)="class_ta_table()"><mat-card-title>CS 4340</mat-card-title></mat-card>
     <mat-card class="clickable" (click)="class_ta_table()"><mat-card-title>MATH 1900</mat-card-title></mat-card>
     <mat-card class="clickable" (click)="class_ta_table()"><mat-card-title>MATH 1800</mat-card-title></mat-card>
 </div>
+<div>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" *ngIf="hide">
 
     <!--- Note that these columns can be defined in any order.
@@ -42,3 +43,9 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
+  
+</div>
+<div layout="row" layout-align="center center">
+    <button layout="row" layout-align="center center" mat-raised-button color="primary"> Primary </button>
+</div>
+
