@@ -12,7 +12,10 @@ import { SuggestionsComponent } from './suggestions/suggestions.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { LayoutModule } from './layout/layout.module';
 import {MatListModule} from '@angular/material/list';
-
+import {MatSortModule} from '@angular/material/sort';
+import {MatTableModule} from '@angular/material/table';
+import {MatCardModule} from '@angular/material/card';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -25,13 +28,16 @@ import {MatListModule} from '@angular/material/list';
     SuggestionsComponent
   ],
   imports: [
-    
+    FlexLayoutModule,
     MatSidenavModule,
     LayoutModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatListModule
+    MatListModule,
+    MatSortModule,
+    MatTableModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
