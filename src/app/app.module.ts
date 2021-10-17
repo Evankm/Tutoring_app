@@ -24,6 +24,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatSortModule} from '@angular/material/sort';
 import {MatTableModule} from '@angular/material/table';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatCheckboxModule
 
 
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

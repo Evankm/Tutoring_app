@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import{Router} from '@angular/router';
+import { CoursesServiceService } from '../courses-service.service';
 
 export interface PeriodicElement {
   name: string;
@@ -31,6 +32,7 @@ export class StudentCoursesComponent implements OnInit {
   hide = false;
   constructor(private router:Router) { }
 
+  constructor(private coursesService: CoursesServiceService) { }
   goToPage(PageName:string):void{
 
     
@@ -40,8 +42,13 @@ export class StudentCoursesComponent implements OnInit {
   }
 
 
+  courses: any = {}
+
   ngOnInit(): void {
-    
+
+    this.courses = this.coursesService.getCourses("616bd72cfc5849e35e4fd6fd").subscribe((data)=>{
+      console.log("Courses", data)
+    })
     
   }
   class_ta_table() {
