@@ -34,7 +34,7 @@ export class StudentCoursesComponent implements OnInit {
     
     
   }
-  displayedColumns: string[] = [ 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = [ 'request', 'name', 'weight', 'symbol'];
   dataSource = ELEMENT_DATA;
 
 }
