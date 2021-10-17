@@ -30,9 +30,8 @@ function func() {
 })
 export class StudentCoursesComponent implements OnInit {
   hide = false;
-  constructor(private router:Router) { }
+  constructor(private router:Router, private coursesService: CoursesServiceService) { }
 
-  constructor(private coursesService: CoursesServiceService) { }
   goToPage(PageName:string):void{
 
     

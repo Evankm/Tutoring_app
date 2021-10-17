@@ -54,8 +54,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatListModule,
     MatSortModule,
     MatTableModule,
-    MatCheckboxModule
-
+    MatCheckboxModule,
 
     HttpClientModule
   ],

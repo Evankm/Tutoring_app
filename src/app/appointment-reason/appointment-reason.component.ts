@@ -9,9 +9,9 @@ import{Router} from '@angular/router';
 })
 export class AppointmentReasonComponent implements OnInit {
 
-  constructor(private router:Router){}
+  constructor(private router:Router, private appointmentService: AppointmentServiceService){}
   goToPage(PageName:string):void{
-  comment: any;
+  //comment: any;
 
     
      this.router.navigate([`${PageName}`]);
