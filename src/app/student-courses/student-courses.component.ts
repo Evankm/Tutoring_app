@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import{Router} from '@angular/router';
 
 export interface PeriodicElement {
   name: string;
@@ -28,7 +29,16 @@ function func() {
 })
 export class StudentCoursesComponent implements OnInit {
   hide = false;
-  constructor() { }
+  constructor(private router:Router) { }
+
+  goToPage(PageName:string):void{
+
+    
+    this.router.navigate([`${PageName}`]);
+  // else
+  // outerrormessgae
+  }
+
 
   ngOnInit(): void {
     
@@ -42,3 +52,4 @@ export class StudentCoursesComponent implements OnInit {
   dataSource = ELEMENT_DATA;
 
 }
+

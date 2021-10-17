@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import{Router} from '@angular/router';
 
 @Component({
   selector: 'app-appointment-reason',
@@ -7,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppointmentReasonComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router){}
+  goToPage(PageName:string):void{
+
+    
+     this.router.navigate([`${PageName}`]);
+   // else
+   // outerrormessgae
+  }
 
   ngOnInit(): void {
   }

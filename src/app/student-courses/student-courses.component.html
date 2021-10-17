@@ -1,4 +1,5 @@
 
+
 <div class='content' fxLayout="row wrap" fxLayoutGap="11px"> 
     <mat-card class="clickable" (click)="class_ta_table()"><mat-card-title >CS 2700</mat-card-title></mat-card>
     <mat-card class="clickable" (click)="class_ta_table()"><mat-card-title>CS 4340</mat-card-title></mat-card>
@@ -46,6 +47,7 @@
   
 </div>
 <div layout="row" layout-align="center center">
-    <button layout="row" layout-align="center center" mat-raised-button color="primary"> Primary </button>
+    <br>
+    <button layout="row" layout-align="center center" (click)="goToPage('appointment-reason')" mat-raised-button color="primary" *ngIf="hide"> Submit </button>
 </div>
 
