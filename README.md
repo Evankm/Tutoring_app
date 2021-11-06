@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.1.
 ## 2nd place winners
 
-This project created by my team and I won 2nd place at Umsl hack 2021
+This project, created by my team and I, won 2nd place at Umsl hack 2021
 
 ## install dependencies
 
